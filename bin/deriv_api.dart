@@ -13,7 +13,7 @@ void main(List<String> arguments) {
     final displayName = decodedMessage['active_symbols'];
     final activeSymbol = decodedMessage['active_symbols'];
 
-    print('\nList of Symbol ID: \n');
+    print('\nList of Market Active Symbol : \n');
 
     for (var i = 0; i < 10; i++) {
       var marketNameID = marketName[i]['market_display_name'];
@@ -43,6 +43,6 @@ void displayTickInfo() {
     // channel.sink.close();
   });
 
-  print('Enter Active Symbol: ');
+  print('Enter an Active Symbol: ');
   channel.sink.add('{ "ticks": "$symbolID"}');
 }
